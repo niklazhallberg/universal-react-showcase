@@ -115,6 +115,8 @@ I designed three implementation modes depending on the context:
 
 Building this taught me that the real leverage in AI-assisted development isn't in writing better prompts — it's in building better constraints. The AI doesn't need to be smarter. It needs to be consistent. And consistency at scale is what separates a collection of components from a maintainable product.
 
+This approach aligns with what Anthropic describes in their [2026 Agentic Coding Trends Report](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) as the shift from writing code to orchestrating agents — engineers focus on architecture and constraints while AI handles implementation. That has been the central goal of this entire project.
+
 ---
 
 *Built by Niklaz Hallberg, February 2026. System rated 9/10 by Cursor's own comprehensive audit.*
