@@ -8,7 +8,7 @@ As a digital designer who works extensively with generative AI for image and vid
 
 Ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
-This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
+This raised a question: how do you design a framework that consistently produces high-quality code, building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
 
 ## The Result: 37% Less Code. Significantly Better Architecture.
 
@@ -35,7 +35,7 @@ Same input. Vastly different output. Full breakdown with code examples in [compa
 
 ## How I Built It
 
-I built this system in collaboration with Claude Opus 4.6, Perplexity AI for deep research, and hands-on exploration across developer forums and documentation.
+I built this system in collaboration with Claude latest model Opus 4.6, Perplexity AI for deep research, and hands-on exploration across developer forums and documentation.
 
 The system has three layers, each solving a different problem:
 
