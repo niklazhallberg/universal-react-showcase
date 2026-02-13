@@ -67,7 +67,7 @@ On top of that, I wrote 15 documentation files that the AI reads before generati
 
 ### 25 Anti-Pattern Rules
 
-After extensive research, I identified the most common mistakes AI assistants make in React code and turned them into hard constraints. The AI is instructed to stop and propose the correct pattern when it detects any of these:
+After extensive research, studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter, I turned the patterns AI assistants get wrong most often into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
 
 - State modeling mistakes (derived state, boolean explosion, direct mutation, prop mirroring)
 - Effect pitfalls (useEffect for transformation, missing deps, stale closures)
