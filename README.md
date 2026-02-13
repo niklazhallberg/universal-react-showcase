@@ -6,7 +6,7 @@ I built an instruction architecture that controls how AI coding assistants gener
 
 As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints — not just better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
 
-Ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
+In the context of React JS, ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
 This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
 
@@ -79,7 +79,7 @@ After extensive research — studying what senior React and TypeScript developer
 
 ### Design Token System
 
-All visual value are found in one file — `tokens.css`. The file ships with placeholder colors that get replaced through a guided **Color Setup Flow** on first use. The AI asks how you want to define your palette:
+Every visual value lives in one file — `tokens.css`. The file ships with placeholder colors that get replaced through a guided **Color Setup Flow** on first use. The AI asks how you want to define your palette:
 
 | Mode | You provide | AI handles |
 |---|---|---|
@@ -143,6 +143,8 @@ I designed three implementation modes depending on the context:
 
 This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their [2026 Agentic Coding Trends Report](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
 
+The real leverage in AI-assisted development isn't in writing better prompts, it's in building better constraints. The model doesn't need to be smarter, it needs clear boundaries. Consistency at scale is what separates a collection of components from a maintainable product.
+
 ---
 
-*Built by Niklaz Hallberg, February 2026.*
+*Built by Niklaz Hallberg [https://www.niklaz.works], February 2026.*
