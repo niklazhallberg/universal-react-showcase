@@ -1,5 +1,5 @@
 # React + TypeScript Universal Design System
-# Version: 1.0 | Last Updated: 2026-02-04 | Maintainer: [Your Name]
+# Version: 1.1 | Last Updated: 2026-02-13 | Maintainer: [Your Name]
 
 ## PHILOSOPHY
 Defines HOW we build, not exact visual values.
@@ -12,6 +12,84 @@ Project: [PROJECT_NAME]
 Stack: React 18 + TypeScript + Vite + CSS Modules
 Design System: Token-based, WCAG 2.1 AA
 Status: [Development / Production]
+
+## COLOR SETUP FLOW
+**Triggered automatically on first component generation or when tokens.css contains placeholder colors.**
+
+tokens.css ships with placeholder colors (blue/slate). These MUST be replaced before building components. The AI detects placeholders by checking if --color-primary is still #3b82f6.
+
+### Step 1: Ask the user which mode
+
+Present these three options:
+
+**A) "Full Palette"** — User provides all colors
+- User specifies: primary, secondary, accent, error, success, warning
+- AI generates neutral scale (50–950) based on primary hue
+- AI generates muted/hover variants for each color
+- AI validates all combinations against WCAG 2.1 AA
+
+**B) "Seed Colors"** — User provides 1–3 colors, AI completes the rest
+- User provides: primary (required), optionally secondary and/or accent
+- User may also provide: a brand image, screenshot, or mood description
+- AI generates complementary palette using color theory
+- AI fills in: neutrals, semantic colors (error/success/warning), muted variants, hover states
+- AI validates all combinations against WCAG 2.1 AA
+- AI presents the full palette for approval before writing to tokens.css
+
+**C) "AI Picks"** — AI generates entire palette
+- AI asks for: industry/mood/style (e.g. "fintech, professional, dark" or "creative agency, bold, playful")
+- AI generates complete palette based on context
+- AI validates all combinations against WCAG 2.1 AA
+- AI presents the full palette for approval before writing to tokens.css
+
+### Step 2: WCAG Validation (all modes)
+
+For every generated color, verify:
+- Text on surface: ≥ 4.5:1 contrast ratio (WCAG AA normal text)
+- Large text on surface: ≥ 3:1 contrast ratio
+- UI elements (borders, icons): ≥ 3:1 against adjacent colors
+- Primary on primary-muted: readable
+- Error/success/warning text on their muted backgrounds: readable
+- Dark mode: re-validate all combinations
+
+If any combination fails:
+- Adjust the failing color automatically (darken/lighten minimally)
+- Report what was adjusted and why
+- Ask user to confirm the adjustment
+
+### Step 3: Present palette for approval
+
+Display the complete palette as a summary:
+
+```
+Primary:     #____ → hover: #____ → muted: #____
+Secondary:   #____ → hover: #____ → muted: #____
+Accent:      #____ → hover: #____ → muted: #____
+Neutrals:    50:#____ 100:#____ ... 950:#____
+Error:       #____ → muted: #____
+Success:     #____ → muted: #____
+Warning:     #____ → muted: #____
+
+WCAG Check: ✅ All combinations pass AA
+Dark mode:  ✅ All combinations pass AA
+```
+
+User must explicitly approve before tokens.css is updated.
+
+### Step 4: Write to tokens.css
+
+Replace ONLY the color values in tokens.css. Do not change:
+- Token names
+- Spacing, typography, radius, shadow, or layout tokens
+- File structure or comments
+- Dark mode structure (update dark mode color values to match new palette)
+
+### Rules
+- Never skip WCAG validation
+- Never write colors without user approval
+- If user uploads an image for color extraction, extract dominant colors and present them as "Seed Colors" (mode B)
+- Placeholder colors (#3b82f6 etc.) are for development only — flag them if detected in production builds
+- This flow runs once per project. After approval, colors are locked unless user requests a change
 
 ## WHERE THINGS LIVE
 - Tokens: src/styles/tokens.css
@@ -64,6 +142,7 @@ Status: [Development / Production]
 - Semantic naming: --color-primary, --color-error
 - Support [data-theme] for light/dark
 - WCAG 2.1 AA contrast required
+- See COLOR SETUP FLOW for initial configuration
 
 ### Typography
 - Scale from tokens.css
@@ -247,11 +326,12 @@ Special: [Constraints]
 ## AI GUIDELINES
 
 ### Before Code
-1. Check for Design-First keywords
-2. Read PROJECT-SPECIFIC OVERRIDES
-3. Check tokens.css for values
-4. Review relevant docs/
-5. Look at existing components
+1. Check if tokens.css has placeholder colors → trigger COLOR SETUP FLOW
+2. Check for Design-First keywords
+3. Read PROJECT-SPECIFIC OVERRIDES
+4. Check tokens.css for values
+5. Review relevant docs/
+6. Look at existing components
 
 ### When Generating
 1. Determine mode (Template/Balanced/Design-First)
@@ -297,7 +377,13 @@ For each rule (1.1 through 8.4), check all new/modified files and report:
 - If FAIL: which file, which line, and the fix
 
 Do NOT modify files during audit — read-only. Fix only after reporting all results.
+
 ## VERSION HISTORY
+- v1.1 (2026-02-13): Added COLOR SETUP FLOW
+  - Three-mode color configuration (Full Palette / Seed Colors / AI Picks)
+  - Mandatory WCAG AA validation for all color combinations
+  - Image-based color extraction support
+  - User approval required before writing to tokens.css
 - v1.0 (2026-02-04): Universal template
   - Principle-based (how, not what)
   - PROJECT-SPECIFIC OVERRIDES
@@ -321,7 +407,8 @@ Changes:
 When in doubt: principles STRICT, values FLEXIBLE. Respect user designs; never sacrifice accessibility or performance.
 
 ## CHANGELOG
+[2026-02-13]: Added COLOR SETUP FLOW with three modes, WCAG validation, and approval gate
 [DATE]: [Changes and rationale]
 
 ---
-~300 lines. Principles stable. Values flexible. Designs respected.
+~350 lines. Principles stable. Values flexible. Colors validated. Designs respected.
