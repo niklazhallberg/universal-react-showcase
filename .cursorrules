@@ -18,6 +18,11 @@ Status: [Development / Production]
 
 tokens.css ships with placeholder colors (blue/slate). These MUST be replaced before building components. The AI detects placeholders by checking if --color-primary is still #3b82f6.
 
+### When to trigger
+- **Template mode:** Always trigger on first component generation
+- **Balanced mode:** Trigger, but default to "Seed Colors" (extract from provided design)
+- **Design-First mode:** Skip entirely — use exact colors from design spec
+
 ### Step 1: Ask the user which mode
 
 Present these three options:
