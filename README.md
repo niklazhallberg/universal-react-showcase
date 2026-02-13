@@ -91,6 +91,16 @@ Every color combination is validated against WCAG 2.1 AA before being written to
 
 Beyond colors, the token system includes an 8px spacing grid, modular typography scale, and semantic naming throughout. Change one variable, every component updates.
 
+### What's Not Included (Yet)
+
+The Color Setup Flow currently covers palette configuration only. In a production environment, the same guided approach could extend to:
+
+- **Typography** — font selection with the same three-mode pattern (provide fonts / seed a mood / let AI choose)
+- **Spacing scale** — 8px grid is the default, but a 4px base works better for dense UIs like dashboards
+- **Border radius personality** — a single question ("Sharp / Soft / Rounded?") changes the entire feel of the system
+
+These were intentionally left out to keep the scope of this test focused. The architecture supports adding them as setup flows for Template and Balanced mode.
+
 ## What's In This Repo
 
 This is the **public showcase** of the project. It includes:
