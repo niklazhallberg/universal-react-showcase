@@ -12,7 +12,7 @@ This raised a question: how do you design a framework that consistently produces
 
 ## The Result: 37% Less Code. Significantly Better Architecture.
 
-I ran A/B tests: same prompt, same IDE (Cursor), same model (Cursor: Auto), no follow-up prompts. One project had my instruction architecture. The other was a default clean Vite scaffold.
+I ran A/B tests: same prompt, same IDE (Cursor), same model (Auto), no follow-up prompts. One project had my instruction architecture. The other was a default clean Vite scaffold.
 
 The system-guided project produced a NotificationCenter component with **220 lines of CSS** compared to **350+ lines** in the unconstrained version, and the shorter version had better dark mode support, token-based consistency, and comprehensive ARIA coverage. Less code but more capability.
 
@@ -121,8 +121,6 @@ I designed three implementation modes depending on the context:
 ## What I Learned
 
 This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their 2026 Agentic Coding Trends Report — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
-
-The real leverage in AI-assisted development isn't in writing better prompts, it's in building better constraints. The model doesn't need to be smarter, it needs clear boundaries. Consistency at scale is what separates a collection of components from a maintainable product.
 
 ---
 
