@@ -8,7 +8,7 @@ As a digital designer who works extensively with generative AI for image and vid
 
 Ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
-This raised a question: how do you design a framework that consistently produces high-quality code, building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
+This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
 
 ## The Result: 37% Less Code. Significantly Better Architecture.
 
@@ -35,7 +35,7 @@ Same input. Vastly different output. Full breakdown with code examples in [compa
 
 ## How I Built It
 
-I built this system in collaboration with Claude latest model Opus 4.6, Perplexity AI for deep research, and hands-on exploration across developer forums and documentation.
+I built this system in collaboration with Claude Opus 4.6, Perplexity AI for deep research, and hands-on exploration across developer forums and documentation.
 
 The system has three layers, each solving a different problem:
 
@@ -49,9 +49,9 @@ On top of that, I wrote 15 documentation files that the AI reads before generati
 
 | File | What It Covers |
 |---|---|
-| `.cursorrules` | Core rules, State Decision Tree, Complexity Ladder |
+| `.cursorrules` | Core rules, Color Setup Flow, State Decision Tree, Complexity Ladder |
 | `CLAUDE.md` | Entry point for Claude-based tools |
-| `docs/design-system.md` | Tokens, typography, colors, spacing (8px grid) |
+| `docs/design-system.md` | Tokens, typography, colors, spacing (8px grid), Color Setup reference |
 | `docs/component-patterns.md` | Component structure, composition, discriminated unions |
 | `docs/data-fetching.md` | React Query, Zod validation, API layer patterns |
 | `docs/accessibility.md` | WCAG 2.1 AA compliance, ARIA, keyboard navigation |
@@ -67,7 +67,7 @@ On top of that, I wrote 15 documentation files that the AI reads before generati
 
 ### 25 Anti-Pattern Rules
 
-After extensive research, studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter, I turned the patterns AI assistants get wrong most often into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
+After extensive research — studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter — I turned the patterns AI assistants get wrong most often into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
 
 - State modeling mistakes (derived state, boolean explosion, direct mutation, prop mirroring)
 - Effect pitfalls (useEffect for transformation, missing deps, stale closures)
@@ -79,7 +79,17 @@ After extensive research, studying what senior React and TypeScript developers w
 
 ### Design Token System
 
-Every visual value lives in one file — `tokens.css`. Zinc gray palette, 8px spacing grid, modular typography scale, semantic color tokens with full dark mode support. Change one variable, every component updates. No hunting through files for hardcoded hex values.
+Every visual value lives in one file — `tokens.css`. The file ships with placeholder colors that get replaced through a guided **Color Setup Flow** on first use. The AI asks how you want to define your palette:
+
+| Mode | You provide | AI handles |
+|---|---|---|
+| **Full Palette** | All 6 colors | Variants, neutrals, WCAG validation |
+| **Seed Colors** | 1–3 colors or an image | Completes palette using color theory, validates WCAG |
+| **AI Picks** | A mood or industry description | Full palette generation, WCAG validation |
+
+Every color combination is validated against WCAG 2.1 AA before being written to `tokens.css` — including dark mode. No component ships with unchecked contrast.
+
+Beyond colors, the token system includes an 8px spacing grid, modular typography scale, and semantic naming throughout. Change one variable, every component updates.
 
 ## What's In This Repo
 
@@ -103,8 +113,9 @@ The complete template with all 15 documentation files, design tokens, Zod schema
 
 1. Open the project in Cursor (or any AI-assisted IDE)
 2. The AI reads `.cursorrules` automatically
-3. `.cursorrules` tells the AI to read the relevant `docs/` files
-4. Every component generated follows the same architecture — TypeScript interfaces, CSS Modules with tokens, semantic HTML, React Query, Zod validation, and explicit loading/error/empty states
+3. On first use, the Color Setup Flow configures your project palette with WCAG validation
+4. `.cursorrules` tells the AI to read the relevant `docs/` files
+5. Every component generated follows the same architecture — TypeScript interfaces, CSS Modules with tokens, semantic HTML, React Query, Zod validation, and explicit loading/error/empty states
 
 I don't have to ask for any of this. The system ensures it happens automatically.
 
@@ -112,15 +123,17 @@ I don't have to ask for any of this. The system ensures it happens automatically
 
 I designed three implementation modes depending on the context:
 
-| Mode | When | Approach |
-|---|---|---|
-| **Template** (default) | No design provided | Strict tokens, 8px grid |
-| **Balanced** | Design provided | Structure from system, character from design |
-| **Design-First** | Pixel-perfect spec | Exact values, system structure |
+| Mode | When | Color handling | Approach |
+|---|---|---|---|
+| **Template** (default) | No design provided | Color Setup Flow (required) | Strict tokens, 8px grid |
+| **Balanced** | Design provided | Seed Colors from design | Structure from system, character from design |
+| **Design-First** | Pixel-perfect spec | Colors from design spec | Exact values, system structure |
 
 ## What I Learned
 
-This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their 2026 Agentic Coding Trends Report — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
+This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their [2026 Agentic Coding Trends Report](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
+
+The real leverage in AI-assisted development isn't in writing better prompts — it's in building better constraints. The model doesn't need to be smarter, it needs clear boundaries. Consistency at scale is what separates a collection of components from a maintainable product.
 
 ---
 
