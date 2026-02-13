@@ -147,4 +147,4 @@ The real leverage in AI-assisted development isn't in writing better prompts, it
 
 ---
 
-*Built by Niklaz Hallberg [https://www.niklaz.works], February 2026.*
+*Built by Niklaz Hallberg [ https://www.niklaz.works ], February 2026.*
