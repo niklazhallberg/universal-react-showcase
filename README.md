@@ -31,7 +31,7 @@ The system-guided project produced a NotificationCenter component with **220 lin
 | Error recovery | No retry | Retry via React Query |
 | Comments | English, minimal | Swedish JSDoc, architectural |
 
-Same input. Different output. Full breakdown with code examples in [comparison.md](./comparison.md).
+Same input. Vastly different output. Full breakdown with code examples in [comparison.md](./comparison.md).
 
 ## How I Built It
 
