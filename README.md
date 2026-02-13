@@ -4,11 +4,11 @@ I built an instruction architecture that controls how AI coding assistants gener
 
 ## The Problem
 
-As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints, not better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are super powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift over time if you don't give them the right directives and rules.
+As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints — not just better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
 
 Ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
-This raised a question: how do you design a framework that consistently produces high-quality UI/UX code — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
+This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
 
 ## The Result: 37% Less Code. Significantly Better Architecture.
 
@@ -35,9 +35,9 @@ Same input. Different output. Full breakdown with code examples in [comparison.m
 
 ## How I Built It
 
-I built this system in collaboration with Claude Opus 4.6.
+I built this system in collaboration with Claude Opus 4.6, Perplexity AI for deep research, and hands-on exploration across developer forums and documentation.
 
-It has three layers, each solving a different problem:
+The system has three layers, each solving a different problem:
 
 ```
 .cursorrules              <- Principles: what the AI must always do
