@@ -1,20 +1,20 @@
 # Universal React Template
 
-I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures every component follows the same patterns, regardless of which AI model generates it.
+I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures consistent, high-quality UI / UX — following the same patterns regardless of which AI model generates the code.
 
 ## The Problem
 
-As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints — not just better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
+As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints, not just better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
 
 In the context of React JS, ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
-This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
+This raised a question: how do you design a framework that consistently produces high-quality code — building exceptional UI/UX components, sections, and websites — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts. That was the challenge I set out to solve.
 
 ## The Result: 37% Less Code. Significantly Better Architecture.
 
 I ran A/B tests: same prompt, same IDE (Cursor), same model (Auto), no follow-up prompts. One project had my instruction architecture. The other was a default clean Vite scaffold.
 
-The system-guided project produced a NotificationCenter component with **220 lines of CSS** compared to **350+ lines** in the unconstrained version, and the shorter version had better dark mode support, token-based consistency, and comprehensive ARIA coverage. Less code but more capability.
+The system-guided project produced a NotificationCenter component with **220 lines of CSS** compared to **350+ lines** in the unconstrained version, and the shorter version had better dark mode support, token-based consistency, and comprehensive ARIA coverage. Less code but more capability. See details in the table below.
 
 | Aspect | Without My System | With My System |
 |---|---|---|
@@ -67,7 +67,7 @@ On top of that, I wrote 15 documentation files that the AI reads before generati
 
 ### 25 Anti-Pattern Rules
 
-After extensive research — studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter — I turned the patterns AI assistants get wrong most often into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
+To learn from the best and avoid common pitfalls, I did extensive research — studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter. I also investigated the patterns AI assistants get wrong most often, and distilled everything into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
 
 - State modeling mistakes (derived state, boolean explosion, direct mutation, prop mirroring)
 - Effect pitfalls (useEffect for transformation, missing deps, stale closures)
