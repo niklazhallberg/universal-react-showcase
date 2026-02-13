@@ -1,16 +1,20 @@
 # Universal React Template
 
-I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures every component follows the same patterns — regardless of which AI model generates it.
+I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures every component follows the same patterns, regardless of which AI model generates it.
 
-## The Problem I Solved
+## The Problem
 
-AI assistants like Cursor are fast, but they're inconsistent. Ask for 20 components and you get 20 different approaches to styling, data fetching, state management, and accessibility. I wanted to fix that at the source — not by correcting code after generation, but by constraining the decisions before code is written.
+As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints, not better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are super powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift over time if you don't give them the right directives and rules.
 
-## 37% Less Code. Significantly Better Architecture.
+Ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
-I ran A/B tests: same prompt, same IDE (Cursor), same model (Auto), no follow-up prompts. One project had my instruction architecture. The other was a clean Vite scaffold. The results surprised me.
+This raised a question: how do you design a framework that consistently produces high-quality UI/UX code — without being overly rigid? A system that balances strict architectural standards with the flexibility to adapt to different needs and contexts.
 
-The system-guided project produced a NotificationCenter component with **220 lines of CSS** compared to **350+ lines** in the unconstrained version — and the shorter version had better dark mode support, token-based consistency, and comprehensive ARIA coverage. Less code, more capability.
+## The Result: 37% Less Code. Significantly Better Architecture.
+
+I ran A/B tests: same prompt, same IDE (Cursor), same model (Cursor: Auto), no follow-up prompts. One project had my instruction architecture. The other was a default clean Vite scaffold.
+
+The system-guided project produced a NotificationCenter component with **220 lines of CSS** compared to **350+ lines** in the unconstrained version, and the shorter version had better dark mode support, token-based consistency, and comprehensive ARIA coverage. Less code but more capability.
 
 | Aspect | Without My System | With My System |
 |---|---|---|
@@ -27,18 +31,21 @@ The system-guided project produced a NotificationCenter component with **220 lin
 | Error recovery | No retry | Retry via React Query |
 | Comments | English, minimal | Swedish JSDoc, architectural |
 
-Same input. Fundamentally different output. Full breakdown with code examples in [comparison.md](./comparison.md).
+Same input. Different output. Full breakdown with code examples in [comparison.md](./comparison.md).
 
 ## How I Built It
 
-The system has three layers, each solving a different problem:
+I built this system in collaboration with Claude Opus 4.6.
+
+It has three layers, each solving a different problem:
+
 ```
 .cursorrules              <- Principles: what the AI must always do
 src/styles/tokens.css     <- Values: the design system source of truth
 docs/                     <- Guides: deep patterns for specific domains
 ```
 
-I wrote 15 documentation files that the AI reads before generating any code. Together they cover everything from component architecture to accessibility compliance:
+On top of that, I wrote 15 documentation files that the AI reads before generating any code. Together they cover everything from component architecture to accessibility compliance:
 
 | File | What It Covers |
 |---|---|
@@ -60,7 +67,7 @@ I wrote 15 documentation files that the AI reads before generating any code. Tog
 
 ### 25 Anti-Pattern Rules
 
-I compiled the most common mistakes AI assistants make in React code and turned them into hard constraints. The AI is instructed to stop and propose the correct pattern when it detects any of these:
+After extensive research, I identified the most common mistakes AI assistants make in React code and turned them into hard constraints. The AI is instructed to stop and propose the correct pattern when it detects any of these:
 
 - State modeling mistakes (derived state, boolean explosion, direct mutation, prop mirroring)
 - Effect pitfalls (useEffect for transformation, missing deps, stale closures)
@@ -113,10 +120,10 @@ I designed three implementation modes depending on the context:
 
 ## What I Learned
 
-Building this taught me that the real leverage in AI-assisted development isn't in writing better prompts — it's in building better constraints. The AI doesn't need to be smarter. It needs to be consistent. And consistency at scale is what separates a collection of components from a maintainable product.
+This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their 2026 Agentic Coding Trends Report — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
 
-This approach aligns with what Anthropic describes in their [2026 Agentic Coding Trends Report](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) as the shift from writing code to orchestrating agents — engineers focus on architecture and constraints while AI handles implementation. That has been the central goal of this entire project.
+The real leverage in AI-assisted development isn't in writing better prompts, it's in building better constraints. The model doesn't need to be smarter, it needs clear boundaries. Consistency at scale is what separates a collection of components from a maintainable product.
 
 ---
 
-*Built by Niklaz Hallberg, February 2026. System rated 9/10 by Cursor's own comprehensive audit.*
+*Built by Niklaz Hallberg, February 2026.*
