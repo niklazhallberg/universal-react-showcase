@@ -79,7 +79,7 @@ After extensive research — studying what senior React and TypeScript developer
 
 ### Design Token System
 
-Every visual value lives in one file — `tokens.css`. The file ships with placeholder colors that get replaced through a guided **Color Setup Flow** on first use. The AI asks how you want to define your palette:
+All visual value are found in one file — `tokens.css`. The file ships with placeholder colors that get replaced through a guided **Color Setup Flow** on first use. The AI asks how you want to define your palette:
 
 | Mode | You provide | AI handles |
 |---|---|---|
@@ -142,8 +142,6 @@ I designed three implementation modes depending on the context:
 ## What I Learned
 
 This was a small-scale test. But even with a relatively simple challenge, the results showed that systematic, holistic guidance produces measurably better output. Anthropic describes this shift in their [2026 Agentic Coding Trends Report](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) — engineers moving from writing code to orchestrating agents, focusing on architecture and constraints while AI handles implementation. That's exactly what this project explores.
-
-The real leverage in AI-assisted development isn't in writing better prompts — it's in building better constraints. The model doesn't need to be smarter, it needs clear boundaries. Consistency at scale is what separates a collection of components from a maintainable product.
 
 ---
 
