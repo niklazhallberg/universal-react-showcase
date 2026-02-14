@@ -1,4 +1,4 @@
-# AI-INSTRUCTION-ARCHITECTURE
+# AI Instruction Architecture for React + TypeScript
 
 I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures consistent, high-quality UI / UX — following the same patterns regardless of which AI model generates the code.
 
