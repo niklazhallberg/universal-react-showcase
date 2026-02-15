@@ -70,7 +70,7 @@ React uses a tree of reusable components to build interfaces. This project appli
 
 ### 25 Anti-Pattern Rules
 
-To learn from the best and avoid common pitfalls, I did extensive research — studying what senior React and TypeScript developers wish they'd known earlier and the most common mistakes they encounter. I also investigated the patterns AI assistants get wrong most often, and distilled everything into 25 hard constraints. When the AI detects any of these, it's instructed to stop and propose the correct approach:
+No need to reinvent the wheel. I did extensive research to collect hard-earned lessons and avoid common pitfalls in React and TypeScript — learning what senior developers wish they'd known earlier, and the most common mistakes both they and junior developers encounter. I also investigated the patterns AI assistants get wrong most often, and distilled everything into 25 hard constraints. In .cursorrules, the AI is instructed to check all new or modified code against these patterns. If it detects a violation, it stops and proposes the correct approach:
 
 - State modeling mistakes (derived state, boolean explosion, direct mutation, prop mirroring)
 - Effect pitfalls (useEffect for transformation, missing deps, stale closures)
