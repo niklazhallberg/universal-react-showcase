@@ -45,7 +45,10 @@ src/styles/tokens.css     <- Values: the design system source of truth
 docs/                     <- Guides: deep patterns for specific domains
 ```
 
-On top of that, I wrote 15 documentation files that the AI reads before generating any code. Together they cover everything from component architecture to accessibility compliance:
+On top of that, I wrote 15 documentation files that the AI reads before generating any code. Together they cover everything from component architecture to accessibility compliance.
+React uses a tree of reusable components to build interfaces. This project applies the same principle one level up — a tree of reusable instruction files that shape how those components get built.
+
+
 
 | File | What It Covers |
 |---|---|
