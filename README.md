@@ -1,10 +1,10 @@
 # AI Instruction Architecture for React + TypeScript
 
-I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Instead of prompting and hoping for the best, I created a system of rules, tokens, and documentation that ensures consistent, high-quality UI / UX — following the same patterns regardless of which AI model generates the code.
+I built an instruction architecture that controls how AI coding assistants generate React + TypeScript code. Coming from a background in digital design, I created a system of rules, tokens, and documentation that ensures consistent, high-quality UI/UX — following the same patterns regardless of which AI model generates the code.
 
 ## The Problem
 
-As a digital designer who works extensively with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints, not just better prompts. My hypothesis was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
+From extensively working with generative AI for image and video production, I've learned that the best outputs come from well-designed constraints, not just better prompts. My conviction was that the same applies to code generation. AI assistants like Cursor are powerful and versatile, but if there's one thing I've learned, it's that AI systems are likely to drift and become inconsistent over time if you don't give them the right directives and rules to follow.
 
 In the context of React JS, ask for 20 components and you'll probably get 20 different approaches to styling, data fetching, state management, and accessibility. Without explicit constraints, the AI doesn't know what you want. It guesses to the best of its ability.
 
@@ -46,6 +46,7 @@ docs/                     <- Guides: deep patterns for specific domains
 ```
 
 On top of that, I wrote 15 documentation files that the AI reads before generating any code. Together they cover everything from component architecture to accessibility compliance.
+
 React uses a tree of reusable components to build interfaces. This project applies the same principle one level up — a tree of reusable instruction files that shape how those components get built.
 
 
