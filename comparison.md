@@ -2,9 +2,9 @@
 
 ## Method
 
-Two A/B tests. Same prompt, same IDE (Cursor), same model selection (Auto), same requirements. The only variable: one project has an instruction architecture (13 docs, a design token system, and a `.cursorrules` file). The other is a clean Vite + React + TypeScript scaffold with zero constraints.
+Two A/B tests. Same prompt, same IDE (Cursor), same model selection (Auto), same requirements. The only variable: one project has an instruction architecture (15 docs, a design token system, and a `.cursorrules` file). The other is a clean Vite + React + TypeScript scaffold with zero constraints.
 
-Both tests used Cursor's Agent mode with model set to "Auto" — meaning the AI chose which model to use. No manual intervention, no follow-up prompts, no Plan mode. One prompt in, result out.
+Both tests used Cursor's Agent mode with model set to "Auto", meaning the AI chose which model to use. No manual intervention, no follow-up prompts, no Plan mode. One prompt in, result out.
 
 ---
 
@@ -147,4 +147,4 @@ The instruction architecture doesn't make the AI smarter. It makes it consistent
 
 ---
 
-*A/B tests conducted February 2026. Both projects used Cursor IDE with model selection set to "Auto." No follow-up prompts or manual corrections were applied to either project. The instruction architecture is available at [github.com/niklazhallberg/universal-react-template](https://github.com/niklazhallberg/universal-react-template).*
+The instruction architecture is available at [github.com/niklazhallberg/universal-react-template](https://github.com/niklazhallberg/ai-instruction-architecture).*
