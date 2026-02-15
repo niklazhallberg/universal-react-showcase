@@ -114,14 +114,6 @@ This is the **public showcase** of the project. It includes:
 
 The complete template with all 15 documentation files, design tokens, Zod schemas, and React Query setup is available in a private repository. If you'd like to see a live demo or discuss the architecture, reach out via [LinkedIn](https://www.linkedin.com/in/niklazhallberg/).
 
-## Stack
-
-- React 18 + TypeScript (strict)
-- Vite
-- CSS Modules + design tokens
-- React Query (@tanstack/react-query)
-- Zod (runtime validation)
-
 ## How It Works In Practice
 
 1. Open the project in Cursor (or any AI-assisted IDE)
