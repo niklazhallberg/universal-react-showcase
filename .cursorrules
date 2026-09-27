@@ -417,4 +417,4 @@ When in doubt: principles STRICT, values FLEXIBLE. Respect user designs; never s
 [DATE]: [Changes and rationale]
 
 ---
-~400 lines. Principles stable. Values flexible. Colors validated. Designs respected.
+Approximately 420 lines. Includes a Color Setup Flow introduced in v1.1; post-v1.1 evaluation remains pending.

@@ -110,6 +110,10 @@ The core instruction file ([`.cursorrules`](./.cursorrules); current v1.1, which
 | [`.cursorrules`](./.cursorrules) | Representative Cursor-format instruction artifact (v1.1) |
 | [`CHANGELOG.md`](./CHANGELOG.md) | Version history of the architecture and this case study |
 
+## Rights
+
+© 2026 Niklaz Hallberg. All rights reserved. This repository is published as a public case study and reference artifact; it is not an open-source package or a reusable implementation.
+
 ## Author
 
 Niklaz Hallberg is a Creative Technologist working across generative AI, creative tools, interactive media and AI-assisted production workflows. This repository is a public case study in making generative frontend workflows more controllable, inspectable and useful in real creative production.

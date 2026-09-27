@@ -6,16 +6,23 @@
 
 Scenarios 01 and 02 are data components tested with v1.0. They show structural consistency but not whether the architecture leaves room for art direction. This scenario tests the central trade-off directly, and it's the first test of the v1.1 Color Setup Flow: **can the architecture stay consistent without everything looking the same?**
 
-## Draft brief
+## Brief
 
-> Build a single-page landing page in React + TypeScript for a cultural event. *[Author to finalise: event, audience, mood words, required sections, any reference imagery.]*
+> Build a single-page landing page in React and TypeScript for "Signal / Noise", a three-night audiovisual event in Stockholm exploring the meeting point between experimental electronic music, generative visuals and spatial sound.
 >
-> Requirements:
-> - A hero that establishes the event's mood
-> - Programme / schedule section
-> - Ticket call to action
-> - Responsive from mobile to wide desktop
-> - Accessible
+> **Audience:** design-aware music listeners, creative technologists, artists, students and culturally curious visitors aged approximately 20–45.
+>
+> **Mood:** nocturnal, precise, tactile, cinematic, experimental and confident; avoid cyberpunk clichés, generic "AI" visuals and conventional festival-site patterns.
+>
+> **Creative direction:** the page should feel like an art-directed cultural identity rather than a SaaS product. Use a strong typographic hierarchy, editorial asymmetry, large image/video moments, restrained but intentional colour, and room for atmosphere. Make the palette a deliberate decision through the Color Setup Flow rather than inheriting placeholder token values.
+>
+> **Required sections:** hero with event identity and date/location; programme highlights; artist or contributor lineup; venue information; ticket CTA; practical information; newsletter signup; footer.
+>
+> **Required states:** ticket CTA states for available, low availability and sold out; newsletter success and error states; accessible mobile navigation.
+>
+> **Evaluation focus:** compare the baseline and guided outputs for art direction, visual hierarchy, controlled variation, colour-system decisions, responsive composition, component structure and the coverage of required UI states.
+
+This is a planned v1.1 evaluation. It must not be presented as completed evidence until the same conditions have been run and documented.
 
 ## Planned conditions
 
@@ -38,7 +45,7 @@ The model is pinned and recorded, with three runs per condition.
 
 | Artifact | What belongs here | Validates |
 |---|---|---|
-| Final brief and references | The finalised brief above plus any mood imagery | Same input across conditions |
+| Brief and references | The brief above plus any mood imagery used | Same input across conditions |
 | Color Setup Flow log | The inputs given and the palette approved in B and C | That the flow ran as designed |
 | Source per condition and run | Unedited output under `A/`, `B/`, `C/` (and `D/`) | Structural consistency |
 | Screenshot grid | Hero and full page, desktop and mobile, every condition side by side | Controlled visual variation |

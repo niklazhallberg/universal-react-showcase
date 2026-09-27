@@ -25,19 +25,21 @@ In both tests, the guided output separated validation, data access, state and pr
 **Change**
 A `BUILD ORDER` section and a `REVIEW PROTOCOL` section were added to the core rules. The review protocol has the agent audit new or modified files against the anti-pattern set, report pass/fail per rule, and change nothing until the report is done.
 
-**Why**
-*[Author to confirm: the reasoning for promoting these from the guides into the core rules.]*
+**Why** *(author's design rationale)*
+The original guidance treated build sequencing and review as supporting documentation. That left too much of the generation workflow open to interpretation: an agent could begin with visual detail before establishing structure, states and reusable component boundaries, and review criteria could be applied inconsistently or too late.
+
+`BUILD ORDER` and `REVIEW PROTOCOL` were promoted into the core rules to make the intended workflow explicit: establish structure and system-level decisions first, then add project-specific visual direction, then review against predefined quality criteria.
 
 **Outcome**
-Not yet evaluated. The v1.0 tests predate this change.
+This was a workflow-design decision. It was added after the documented v1.0 tests and isn't validated by those results.
+
 
 ---
 
 ## Iteration 2: separating structural consistency from art direction
 
-**Observation**
-In v1.0, the token file shipped with placeholder colours, and in Template mode every component used tokens exclusively. Nothing in the rules asked for creative input on the palette, so placeholder values could flow straight into generated UI.
-*[Author to add: what was actually observed in use that prompted this change.]*
+**Observation** *(a v1.0 design risk identified during review, not a measured result)*
+In v1.0, the token file shipped with placeholder values and the rules required components to use tokens consistently. However, the workflow didn't require a deliberate, brief-specific palette decision before component generation. That created a risk that placeholder values could flow directly into generated interfaces, or that colour direction would be decided reactively rather than as part of art direction.
 
 **Change**
 v1.1 added a palette setup flow that runs on first generation:
@@ -47,10 +49,10 @@ v1.1 added a palette setup flow that runs on first generation:
 - Only colour values change; token names and structure stay fixed
 
 **Why**
-The structural rules (tokens, composition, accessibility) should stay stable, while the visual identity is decided per project. The flow makes that boundary operational: creative input is asked for rather than assumed.
+To establish semantic colour roles and a brief-specific palette before component generation, while keeping stable structural UI constraints separate from project-specific art direction.
 
 **Outcome**
-**Untested.** The published comparisons ran against v1.0, before this flow existed. Its effect on visual variety and on the correctness of the contrast checks is a design intention until it's re-tested.
+**Untested.** This was introduced after the documented v1.0 evaluation. No controlled post-v1.1 evaluation has been completed, so the expected effect on creative variation and structural consistency remains a hypothesis to test, not a reported outcome.
 
 ---
 
