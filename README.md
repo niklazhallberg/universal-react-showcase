@@ -116,6 +116,5 @@ The core instruction file ([`.cursorrules`](./.cursorrules); current v1.1, which
 
 ## Author
 
-Niklaz Hallberg is a Creative Technologist working across generative AI, creative tools, interactive media and AI-assisted production workflows. This repository is a public case study in making generative frontend workflows more controllable, inspectable and useful in real creative production.
+Niklaz Hallberg - Creative Technologist. This repository is a public case study in making generative frontend workflows more controllable, inspectable and useful in real creative production.
 
-[niklaz.works](https://www.niklaz.works) · [LinkedIn](https://www.linkedin.com/in/niklazhallberg/)
