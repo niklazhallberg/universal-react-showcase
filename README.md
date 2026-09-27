@@ -76,10 +76,10 @@ A frontend skill can be one input inside this workflow. That combination hasn't 
 |---|---|---|
 | Primary purpose | Guides the agent's design approach during an individual frontend task | Makes AI-assisted UI production more controllable, reviewable and improvable across components |
 | Visual direction | Primary focus: intentional aesthetic choices grounded in the brief, avoiding templated defaults | Connects visual direction to generation modes that decide which values stay fixed and which remain open |
-| Reusable UI-system constraints | Typically proposes a token plan per brief | A persistent, shared token layer and component rules reused by every generation in a project |
-| Loading, empty and error states | Guidance depends on the skill; the published `frontend-design` skill covers how to write for them | Part of the generation rules and the review criteria |
+| Reusable UI-system constraints | Typically proposes a token plan per brief | A persistent, shared token layer and component rules designed to be reused by every generation in a project |
+| Loading, empty and error states | Guidance depends on the skill; the published `frontend-design` skill covers how to write for them | Covered in the generation rules (v1.0 domain guides) and in the planned review rubric |
 | Baseline vs. guided comparison | Outside a skill's scope | Central method of this case study |
-| Failure modes and iteration | In-task self-critique | Versioned changes to the instructions themselves, documented between tests |
+| Failure modes and iteration | In-task self-critique | Versioned changes to the instructions themselves, documented between versions |
 | Human review | Supports the agent's own plan review | Human creative and technical review in the loop; approval and audit steps added after the v1.0 tests (untested) |
 | Tool scope | Packaged as an Agent Skill | Principles written in tool-neutral form; tested in Cursor only |
 
