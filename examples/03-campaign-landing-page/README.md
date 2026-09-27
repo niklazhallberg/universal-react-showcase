@@ -1,10 +1,10 @@
-# 03 · Campaign landing page *(planned)*
+# 03 · Campaign landing page
 
-**Status: not run. There are no results in this folder.**
+**Version:** v1.1 · **Status:** planned evaluation. No results yet.
 
 ## Why this scenario
 
-Tests 01 and 02 are data components. They show structural consistency but not whether the architecture leaves room for art direction. This scenario tests the central trade-off directly: **can the architecture be consistent without everything looking the same?**
+Scenarios 01 and 02 are data components tested with v1.0. They show structural consistency but not whether the architecture leaves room for art direction. This scenario tests the central trade-off directly, and it's the first test of the v1.1 Color Setup Flow: **can the architecture stay consistent without everything looking the same?**
 
 ## Draft brief
 
@@ -22,9 +22,9 @@ Tests 01 and 02 are data components. They show structural consistency but not wh
 | Condition | Setup |
 |---|---|
 | A · Baseline | Clean scaffold, no instructions |
-| B · Guided, Template mode | Instructions v1.1, palette setup flow run first (inputs logged) |
+| B · Guided, Template mode | Instructions v1.1, Color Setup Flow run first (inputs logged) |
 | C · Guided, Balanced mode | Instructions v1.1 plus a reference image as seed |
-| D · Guided + frontend skill *(optional)* | Condition B with a general-purpose frontend skill enabled, testing the complementary-layer claim |
+| D · Guided + frontend skill *(optional)* | Condition B with a general-purpose frontend skill enabled, to explore the complementary-layer idea |
 
 The model is pinned and recorded, with three runs per condition.
 
@@ -34,6 +34,12 @@ The model is pinned and recorded, with three runs per condition.
 - Whether B and C diverge visually while sharing structure
 - Whether token discipline flattens typography or motion
 
-## Evidence to add
+## Planned evaluation artifacts (v1.1)
 
-Follow the [evidence protocol](../README.md#evidence-protocol).
+| Artifact | What belongs here | Validates |
+|---|---|---|
+| Final brief and references | The finalised brief above plus any mood imagery | Same input across conditions |
+| Color Setup Flow log | The inputs given and the palette approved in B and C | That the flow ran as designed |
+| Source per condition and run | Unedited output under `A/`, `B/`, `C/` (and `D/`) | Structural consistency |
+| Screenshot grid | Hero and full page, desktop and mobile, every condition side by side | Controlled visual variation |
+| Rubric scores | Per condition, with justifications | Observed tendencies |

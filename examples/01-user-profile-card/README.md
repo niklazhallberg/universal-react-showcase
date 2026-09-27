@@ -1,6 +1,6 @@
 # 01 · UserProfileCard
 
-**Status:** run against instruction v1.0 (published 2026-02-09). The written review is in [`comparison.md`](../../comparison.md#test-1-userprofilecard). Source code and screenshots haven't been added yet.
+**Version:** v1.0 · **Status:** run; written review published in [`comparison.md`](../../comparison.md#test-1-userprofilecard) (2026-02-09)
 
 ## Brief
 
@@ -20,10 +20,10 @@
 |---|---|---|
 | Project | Clean Vite + React + TS | The same, plus instructions v1.0 |
 | Editor | Cursor, Agent mode | Cursor, Agent mode |
-| Model | "Auto" *(exact model not recorded)* | "Auto" *(exact model not recorded)* |
+| Model | "Auto" (exact model not recorded) | "Auto" (exact model not recorded) |
 | Budget | One prompt, no follow-ups | One prompt, no follow-ups |
 
-## Outcome summary
+## Observed (v1.0)
 
 - **Baseline:** fetched data in an effect with manual state and a type cast; component-local hardcoded CSS variables; its own dark palette; an error message with no retry.
 - **Guided:** a query library plus schema validation; layered files; global tokens; inherited theming; token-based focus ring; reduced-motion support; retry.
@@ -33,10 +33,11 @@
 
 One run per condition; model not pinned; reviewed by the author; no automated checks.
 
-## Evidence to add
+## Evidence pending (v1.0)
 
-- [ ] `baseline/`: generated source, unedited
-- [ ] `guided/`: generated source, unedited
-- [ ] Screenshots: the three variants × loading / error / populated, light and dark
-- [ ] Exact model used in each condition (Cursor chat history)
-- [ ] axe results for both
+| Artifact | What belongs here | Supports |
+|---|---|---|
+| `baseline/`, `guided/` | Complete generated source, unedited | Every row in the observations above |
+| Screenshots | 3 variants × loading / error / populated, light and dark, both conditions | Visual consistency, state coverage |
+| Model record | The model Cursor served in each condition | Comparability of the two runs |
+| axe report | Violations by severity, both conditions | The accessibility observation |

@@ -4,6 +4,8 @@ This document records the method, briefs, observations and limitations behind th
 
 *This is a structured showcase evaluation, not a statistically generalisable benchmark.*
 
+> **Version boundary:** every result in this document relates to instruction **v1.0**. The Color Setup Flow, build order and self-audit protocol were added on 2026-02-13, after this evaluation, and haven't yet been tested under the same conditions.
+
 ---
 
 ## Method
@@ -60,7 +62,7 @@ Stated up front so the findings can be read in proportion:
 
 ### Observations
 
-| Area | Baseline | Guided |
+| Area | Baseline | Guided (v1.0) |
 |---|---|---|
 | Data handling | `useEffect` + `fetch` + three `useState` calls; `const data: User = await response.json()` with no runtime validation | React Query plus a Zod schema; response typed `unknown` before parsing, with the type inferred from the schema |
 | Composition | Types, hook, CSS and component all inside `components/UserProfileCard/` | Split into `schemas/` → `api/` → `hooks/` → `components/` |
@@ -130,9 +132,9 @@ The guided output wrote Swedish JSDoc comments and Swedish `aria-label`s ("Notif
 
 ---
 
-## Summary
+## Summary (v1.0)
 
-| Area | Baseline tendency | Guided tendency | Seen in |
+| Area | Baseline tendency | Guided tendency (v1.0) | Seen in |
 |---|---|---|---|
 | Data validation | Type cast | Runtime schema | Tests 1, 2 |
 | Data fetching | Manual effect + state | Query library | Tests 1, 2 |
@@ -156,7 +158,7 @@ The instructions didn't make the model smarter. They made its decisions **consis
 
 - That the effect holds across models, runs or other kinds of brief. In particular, no visual or art-direction-led brief has been tested yet.
 - That the guided output needed less manual cleanup before review (not measured).
-- Anything about the palette setup flow added in v1.1 (not yet re-tested).
+- Anything about v1.1. The Color Setup Flow, build order and self-audit protocol post-date these tests.
 - Any comparison with third-party skills or rule sets.
 
-Next steps are tracked in [`examples/`](./examples/) and [`docs/iterations.md`](./docs/iterations.md).
+**Next evaluation:** rerun the same scenarios with v1.1 to assess whether the Color Setup Flow increases art-direction flexibility without reducing structural consistency. See the [evidence roadmap](./examples/README.md#evidence-roadmap).
