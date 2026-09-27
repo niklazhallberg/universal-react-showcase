@@ -1,5 +1,6 @@
 # React + TypeScript Universal Design System
-# Version: 1.1 | Last Updated: 2026-02-13 | Maintainer: [Niklaz Hallberg]
+# Version: 1.1 | Last Updated: 2026-02-13 | Maintainer: Niklaz Hallberg
+# Public representative artifact. Referenced docs/ and tokens.css are private; see instructions/architecture.md.
 
 ## PHILOSOPHY
 Defines HOW we build, not exact visual values.
