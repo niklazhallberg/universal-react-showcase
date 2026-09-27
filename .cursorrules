@@ -1,5 +1,6 @@
 # React + TypeScript Universal Design System
-# Version: 1.1 | Last Updated: 2026-02-13 | Maintainer: [Niklaz Hallberg]
+# Version: 1.1 | Last Updated: 2026-02-13 | Maintainer: Niklaz Hallberg
+# Public representative artifact. Referenced docs/ and tokens.css are private; see instructions/architecture.md.
 
 ## PHILOSOPHY
 Defines HOW we build, not exact visual values.
@@ -416,4 +417,4 @@ When in doubt: principles STRICT, values FLEXIBLE. Respect user designs; never s
 [DATE]: [Changes and rationale]
 
 ---
-~400 lines. Principles stable. Values flexible. Colors validated. Designs respected.
+Approximately 420 lines. Includes a Color Setup Flow introduced in v1.1; post-v1.1 evaluation remains pending.
